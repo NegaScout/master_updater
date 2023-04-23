@@ -1,0 +1,12 @@
+[Unit]
+Description = The Hermes Discord bot.
+Requires = network.target
+
+[Service]
+Type = oneshot
+ExecStartPre = conda activate -n master_updater
+ExecStart = python3 /home/honza/Projects/Python/MasterUpdater/master_updater.py
+RemainAfterExit = yes
+
+[Install]
+WantedBy = multi-user.target

@@ -1,0 +1,9 @@
+[Unit]
+Description = master_updater target
+
+[Timer]
+Unit = master_updater.service
+OnCalendar = *:0/15
+
+[Install]
+WantedBy=timers.target
